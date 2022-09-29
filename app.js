@@ -486,7 +486,7 @@ function addInfo(fileId, fileInfo) {
   info.getVideoLength = new Promise((resolve, reject) => {
     if (!info.videoLength) {
       getDuration(
-        (process.env.MAINHOSTNAME || "http://127.0.0.1:") + PORT + "/" + fileId
+        (process.env.MAINHOSTNAME || "http://127.0.0.1:" + PORT + "/") + fileId
       )
         .then((duration) => {
           info.videoLength = duration;
