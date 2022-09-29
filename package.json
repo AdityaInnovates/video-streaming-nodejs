@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/riccardomartinelli/Google-drive-video-streaming-nodejs#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.2",
     "express-end": "0.0.8",
     "get-video-duration": "^0.2.0",
