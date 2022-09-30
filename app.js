@@ -8,7 +8,7 @@ var stream = require("stream");
 const getDuration = require("get-video-duration");
 var app = express();
 var cors = require("cors");
-
+require("dotenv").config();
 app.use(cors());
 
 // If modifying these scopes, delete your previously saved credentials
