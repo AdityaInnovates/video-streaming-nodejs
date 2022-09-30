@@ -483,23 +483,23 @@ function getInfoFromId(fileId) {
 
 function addInfo(fileId, fileInfo) {
   var info = { id: fileId, info: fileInfo };
-  info.getVideoLength = new Promise((resolve, reject) => {
-    if (!info.videoLength) {
-      getDuration(
-        (process.env.MAINHOSTNAME || "http://127.0.0.1:" + PORT + "/") + fileId
-      )
-        .then((duration) => {
-          info.videoLength = duration;
-          resolve(duration);
-        })
-        .catch((error) => {
-          console.log(error);
-          reject(error);
-        });
-    } else {
-      resolve(info.videoLength);
-    }
-  });
+  // info.getVideoLength = new Promise((resolve, reject) => {
+  //   if (!info.videoLength) {
+  //     getDuration(
+  //       (process.env.MAINHOSTNAME || "http://127.0.0.1:" + PORT + "/") + fileId
+  //     )
+  //       .then((duration) => {
+  //         info.videoLength = duration;
+  //         resolve(duration);
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //         reject(error);
+  //       });
+  //   } else {
+  //     resolve(info.videoLength);
+  //   }
+  // });
 
   filesInfo.push(info);
 }
